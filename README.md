@@ -2,7 +2,7 @@
 
 ## Índice
 
-- [1. Resumen del proyecto](#2-resumen-del-proyecto)
+- [1. Resumen del proyecto](#1-resumen-del-proyecto)
 - [2. Instalación](#2-instalacion)
 
 ---
