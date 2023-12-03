@@ -5,8 +5,8 @@ import {
   SwipeAction,
   TrailingActions,
 } from "react-swipeable-list";
-
-import { formatearFecha } from "../helpers";
+import "react-swipeable-list/dist/styles.css";
+import { formatearFecha } from "../Helpers";
 import IconoAhorro from "../img/icono_ahorro.svg";
 import IconoCasa from "../img/icono_casa.svg";
 import IconoComida from "../img/icono_comida.svg";
@@ -24,8 +24,10 @@ const diccionarioIconos = {
   salud: IconoSalud,
   suscripciones: IconoSuscripciones,
 };
-export const Gasto = ({ gasto, setGastoEditar }) => {
+
+const Gasto = ({ gasto, setGastoEditar, eliminarGasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
+  const dolar = "$";
 
   const leadingActions = () => (
     <LeadingActions>
@@ -35,7 +37,9 @@ export const Gasto = ({ gasto, setGastoEditar }) => {
 
   const trailingActions = () => (
     <TrailingActions>
-      <SwipeAction onClick={() => console.log("Eliminar")}>
+      <SwipeAction
+        onClick={() => eliminarGasto(id)}
+        destructive={true}>
         Eliminar
       </SwipeAction>
     </TrailingActions>
@@ -54,15 +58,20 @@ export const Gasto = ({ gasto, setGastoEditar }) => {
             <div className='descripcion-gasto'>
               <p className='categoria'>{categoria}</p>
               <p className='nombre-gasto'>{nombre}</p>
-              <p className='fecha-gastos'>
-                Agregado el:{""}
-                <span> {formatearFecha(fecha)}</span>
+              <p className='fecha-gasto'>
+                Agregado el: {""}
+                <span>{formatearFecha(fecha)}</span>
               </p>
             </div>
           </div>
-          <p className='cantidad-gasto'>${cantidad}</p>
+          <p className='cantidad-gasto'>
+            {dolar}
+            {cantidad}
+          </p>
         </div>
       </SwipeableListItem>
     </SwipeableList>
   );
 };
+
+export default Gasto;
