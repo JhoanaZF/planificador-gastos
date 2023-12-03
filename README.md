@@ -7,7 +7,7 @@
 
 ---
 
-## Resumen del proyecto
+## 1. Resumen del proyecto
 
 Bienvenido a la aplicación de Controlador de Gastos. Esta aplicación está diseñada para ayudarte a gestionar tu presupuesto de manera más efectiva y tener un control más claro sobre tus gastos personales.
 
@@ -25,7 +25,7 @@ Establece un presupuesto mensual y recibe notificaciones cuando estés cerca de 
 
 Visualiza gráficos y estadísticas para entender mejor tus patrones de gastos y tomar decisiones informadas.
 
-## Instalación
+## 2. Instalación
 
 1. Clona este repositorio en tu máquina local.
 
